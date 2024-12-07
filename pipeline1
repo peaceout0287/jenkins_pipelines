@@ -1,0 +1,20 @@
+pipeline {
+agent any
+stages {
+stage('build') {
+steps{
+echo "build is success"
+}
+}
+stage('test') {
+steps{
+echo "testing the code with junit"
+}
+}
+stage('deploy') {
+stages{
+echo "deploying the code in instance"
+}
+}
+}
+}
